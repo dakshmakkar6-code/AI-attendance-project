@@ -73,6 +73,7 @@ def style_base_layout():
                 font-size: 2rem !important;
                 line-height:0.9 !important;
                 margin-bottom:0rem !important;
+                color: #5865F2 !important;
             }
                 
             h3, h4, p {
@@ -107,6 +108,29 @@ def style_base_layout():
                 transition: transform 0.25s ease-in-out !important;
                 }
 
+
+            div[data-baseweb="input"], div[data-baseweb="textarea"] {
+                background-color: white !important;
+                border-radius: 0.75rem !important;
+            }
+
+            div[data-baseweb="input"] input,
+            div[data-baseweb="textarea"] textarea {
+                background-color: white !important;
+                color: #333333 !important;
+                caret-color: #333333 !important;
+            }
+
+            div[data-baseweb="input"] input::placeholder,
+            div[data-baseweb="textarea"] textarea::placeholder {
+                color: #aaaaaa !important;
+            }
+
+            div[data-testid="stTextInput"] label,
+            div[data-testid="stTextArea"] label {
+                color: #5865F2 !important;
+                font-family: 'Outfit', sans-serif !important;
+            }
             button:hover{
                 transform :scale(1.05)}
         </style>  

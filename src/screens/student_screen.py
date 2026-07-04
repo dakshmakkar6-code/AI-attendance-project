@@ -3,10 +3,10 @@ import streamlit as st
 from src.ui.base_layout import style_background_dashboard, style_base_layout
 
 from src.components.header import header_dashboard
-# from PIL import Image
-# import numpy as np
-# from src.pipelines.face_pipeline import predict_attendance, get_face_embeddings, train_classifier
-# from src.pipelines.voice_pipeline import get_voice_embedding
+from PIL import Image
+import numpy as np
+from src.pipelines.face_pipeline import predict_attendance, get_face_embeddings, train_classifier
+from src.pipelines.voice_pipeline import get_voice_embedding
 # from src.database.db import get_all_students, create_student, get_student_subjects, get_student_attendance, unenroll_student_to_subject
 # import time
 
@@ -15,7 +15,7 @@ from src.components.header import header_dashboard
 
 def student_dashboard():
     student_data = st.session_state.student_data
-    student_id = student_data['student_id']
+    # student_id = student_data['student_id']
     c1, c2 = st.columns(2, vertical_alignment='center', gap='xxlarge')
     with c1:
         header_dashboard()
@@ -109,10 +109,10 @@ def student_screen():
     st.space()
     
 #     show_registration = False
-#     photo_source = st.camera_input("Position your face in the center")
+    photo_source = st.camera_input("Position your face in the center")
 
-#     if photo_source:
-#         img = np.array(Image.open(photo_source))
+    if photo_source:
+        img = np.array(Image.open(photo_source))
 
 #         with st.spinner('AI is scanning..'):
 #             detected, all_ids, num_faces = predict_attendance(img)
