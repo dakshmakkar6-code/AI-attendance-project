@@ -43,7 +43,6 @@ def style_background_dashboard():
     
 
 def style_base_layout():
-# asdasd
     st.markdown("""
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&display=swap');
@@ -60,7 +59,7 @@ def style_base_layout():
                 color: #333333 !important;
             }
 
-            button *, button p, button span, button div {
+            button * {
                 color: white !important;
             }
 
@@ -129,6 +128,8 @@ def style_base_layout():
 
             /* Success / Info / Warning / Error boxes */
             [data-testid="stAlert"] {
+                background-color: white !important;
+                color: #333333 !important;
                 border-radius: 0.75rem !important;
             }
 
@@ -156,13 +157,7 @@ def style_base_layout():
                 color: #333333 !important;
             }
 
-            [data-testid="stDialog"] button {
-                color: white !important;
-            }
-
-            [data-testid="stDialog"] button *,
-            [data-testid="stDialog"] button p,
-            [data-testid="stDialog"] button span {
+            [data-testid="stDialog"] button * {
                 color: white !important;
             }
 
@@ -195,18 +190,6 @@ def style_base_layout():
             /* Selectbox, radio, checkbox labels */
             [data-testid="stWidgetLabel"] p {
                 color: #5865F2 !important;
-            }
-
-            /* Selectbox dropdown */
-            div[data-baseweb="select"] div {
-                background-color: white !important;
-                color: #333333 !important;
-            }
-
-            /* Alerts / info / warning boxes */
-            [data-testid="stAlert"] {
-                background-color: white !important;
-                color: #333333 !important;
             }
 
             /* Divider */
